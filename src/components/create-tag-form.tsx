@@ -5,6 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "./ui/button";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "react-toastify";
+
+const notifySuccess = () => toast.success("Success create...");
 
 const createTagSchema = z.object({
   title: z.string().min(3, { message: "Minimum 3 characters." }),
@@ -19,6 +22,10 @@ function getSlugFromString(input: string): string {
     .toLowerCase()
     .replace(/[^\w\s]/g, "")
     .replace(/\s+/g, "-");
+}
+
+function getMathRandom(amountOfVideos: number) {
+  return Math.floor(Math.random() * amountOfVideos);
 }
 
 export function CreateTagForm() {
@@ -37,19 +44,23 @@ export function CreateTagForm() {
       // delay 2s
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      await fetch("http://localhost:3333/tags", {
+      const response = await fetch("http://localhost:3333/tags", {
         method: "POST",
         body: JSON.stringify({
           title,
           slug,
-          amountOfVideos: 0,
+          amountOfVideos: getMathRandom(100),
         }),
       });
+      return response;
     },
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["get-tags"],
-      });
+    onSuccess: (data) => {
+      if (data.status === 201) {
+        notifySuccess();
+        queryClient.invalidateQueries({
+          queryKey: ["get-tags"],
+        });
+      }
     },
   });
 

@@ -17,6 +17,8 @@ import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CreateTagForm } from "./components/create-tag-form";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export interface TagResponse {
   first: number;
@@ -94,6 +96,7 @@ export function App() {
                   </Dialog.Description>
                 </div>
                 <CreateTagForm />
+                <ToastContainer />
                 <Dialog.Close />
               </Dialog.Content>
             </Dialog.Portal>
