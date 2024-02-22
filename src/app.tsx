@@ -1,4 +1,4 @@
-import { Plus, Search, FileDown, MoreHorizontal } from "lucide-react";
+import { Plus, Search, FileDown, MoreHorizontal, Filter } from "lucide-react";
 import { Header } from "./components/header";
 import { Tabs } from "./components/tabs";
 import { Button } from "./components/ui/button";
@@ -11,8 +11,11 @@ import {
   TableHeader,
   TableRow,
 } from "./components/ui/table";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { Pagination } from "./components/pagination";
+import { useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useDebounceValue } from "./hooks/use-debounce-value";
 
 export interface TagResponse {
   first: number;
@@ -32,16 +35,35 @@ export interface Tag {
 }
 
 export function App() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = searchParams.get("page") ? Number(searchParams.get("page")) : 1;
+  const urlFilter = searchParams.get("filter") ?? "";
+  const [filter, setFilter] = useState(urlFilter);
+  const debouncedFilter = useDebounceValue(filter, 1000);
+
   const { data: tagsResponse, isLoading } = useQuery<TagResponse>({
-    queryKey: ["get-tags"],
+    queryKey: ["get-tags", urlFilter, page],
     queryFn: async () => {
       const response = await fetch(
-        "http://localhost:3333/tags?_page=1&_per_page=10"
+        `http://localhost:3333/tags?_page=${page}&_per_page=10&title=${debouncedFilter}`
       );
       const data = await response.json();
+
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       return data;
     },
+    placeholderData: keepPreviousData,
   });
+
+  function handleFilter() {
+    setSearchParams((params) => {
+      params.set("page", "1");
+      params.set("filter", filter);
+
+      return params;
+    });
+  }
 
   if (isLoading) return null;
 
@@ -60,10 +82,20 @@ export function App() {
           </Button>
         </div>
         <div className="flex items-center justify-between">
-          <Input variant="filter">
-            <Search className="size-3" />
-            <Control placeholder="Search tags..." />
-          </Input>
+          <div className="flex items-center gap-2">
+            <Input variant="filter">
+              <Search className="size-3" />
+              <Control
+                placeholder="Search tags..."
+                onChange={(e) => setFilter(e.target.value)}
+                value={filter}
+              />
+            </Input>
+            <Button onClick={handleFilter}>
+              <Filter className="size-3" />
+              Filtrar
+            </Button>
+          </div>
 
           <Button>
             <FileDown className="size-3" />
@@ -108,7 +140,7 @@ export function App() {
           <Pagination
             pages={tagsResponse.pages}
             items={tagsResponse.items}
-            page={1}
+            page={page}
           />
         )}
       </main>
