@@ -14,8 +14,9 @@ import {
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { Pagination } from "./components/pagination";
 import { useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDebounceValue } from "./hooks/use-debounce-value";
+import { useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { CreateTagForm } from "./components/create-tag-form";
 
 export interface TagResponse {
   first: number;
@@ -39,17 +40,14 @@ export function App() {
   const page = searchParams.get("page") ? Number(searchParams.get("page")) : 1;
   const urlFilter = searchParams.get("filter") ?? "";
   const [filter, setFilter] = useState(urlFilter);
-  const debouncedFilter = useDebounceValue(filter, 1000);
 
   const { data: tagsResponse, isLoading } = useQuery<TagResponse>({
     queryKey: ["get-tags", urlFilter, page],
     queryFn: async () => {
       const response = await fetch(
-        `http://localhost:3333/tags?_page=${page}&_per_page=10&title=${debouncedFilter}`
+        `http://localhost:3333/tags?_page=${page}&_per_page=10&title=${urlFilter}`
       );
       const data = await response.json();
-
-      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       return data;
     },
@@ -76,11 +74,32 @@ export function App() {
       <main className="max-w-6xl mx-auto space-y-5">
         <div className="flex items-center gap-3">
           <h1 className="text-xl font-bold">Tags</h1>
-          <Button variant="primary">
-            <Plus className="size-3" />
-            Create new
-          </Button>
+          <Dialog.Root>
+            <Dialog.DialogTrigger asChild>
+              <Button variant="primary">
+                <Plus className="size-3" />
+                Create new
+              </Button>
+            </Dialog.DialogTrigger>
+
+            <Dialog.Portal>
+              <Dialog.DialogOverlay className="fixed inset-0 bg-black/70" />
+              <Dialog.Content className="fixed space-y-10 p-10 right-0 top-0 bottom-0 h-screen min-w-[320px] bg-zinc-950 border-l border-zinc-900">
+                <div className="space-y-3">
+                  <Dialog.DialogTitle className="text-xl font-bold">
+                    Create tag
+                  </Dialog.DialogTitle>
+                  <Dialog.Description className="text-sm text-zinc-500">
+                    Tags can be used to group videos about similar concepts.
+                  </Dialog.Description>
+                </div>
+                <CreateTagForm />
+                <Dialog.Close />
+              </Dialog.Content>
+            </Dialog.Portal>
+          </Dialog.Root>
         </div>
+
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Input variant="filter">
