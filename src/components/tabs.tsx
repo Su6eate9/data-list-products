@@ -1,4 +1,4 @@
-import { ListVideo, Tags, Settings, Code2 } from "lucide-react";
+import { Martini, Menu, Settings, Store } from "lucide-react";
 
 export function Tabs() {
   return (
@@ -8,16 +8,24 @@ export function Tabs() {
           href=""
           className="py-1.5 px-3 bg-zinc-800 text-zinc-100 inline-flex items-center text-sm gap-1.5 font-medium rounded-full border border-transparent"
         >
-          <ListVideo className="size-4" />
-          Uploads
+          <Menu className="size-4" />
+          Menu
         </a>
 
         <a
           href=""
           className="py-1.5 px-3 text-zinc-300 inline-flex items-center text-sm gap-1.5 font-medium rounded-full border border-transparent hover:border-zinc-800"
         >
-          <Tags className="size-4" />
-          Tags
+          <Martini className="size-4" />
+          Drinks
+        </a>
+
+        <a
+          href=""
+          className="py-1.5 px-3 text-zinc-300 inline-flex items-center text-sm gap-1.5 font-medium rounded-full border border-transparent hover:border-zinc-800"
+        >
+          <Store className="size-4" />
+          About
         </a>
 
         <a
@@ -26,14 +34,6 @@ export function Tabs() {
         >
           <Settings className="size-4" />
           Settings
-        </a>
-
-        <a
-          href=""
-          className="py-1.5 px-3 text-zinc-300 inline-flex items-center text-sm gap-1.5 font-medium rounded-full border border-transparent hover:border-zinc-800"
-        >
-          <Code2 className="size-4" />
-          Developers
         </a>
       </nav>
     </div>

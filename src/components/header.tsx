@@ -37,7 +37,7 @@ export function Header() {
           <ChevronDown className="text-zinc-600 size-4" />
         </div>
 
-        <svg
+        {/* <svg
           width="6"
           height="16"
           viewBox="0 0 6 16"
@@ -56,7 +56,7 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <span className="text-sm font-medium text-zinc-100">Drinks</span>
           <ChevronDown className="text-zinc-600 size-4" />
-        </div>
+        </div> */}
       </div>
 
       <div className="flex items-center gap-3">
