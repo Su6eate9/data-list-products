@@ -20,21 +20,21 @@ import { CreateTagForm } from "./components/create-tag-form";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export interface TagResponse {
+export interface DrinkResponse {
   first: number;
   prev: number | null;
   next: number;
   last: number;
   pages: number;
   items: number;
-  data: Tag[];
+  data: Drink[];
 }
 
-export interface Tag {
+export interface Drink {
   id: string;
   title: string;
   slug: string;
-  amountOfVideos: number;
+  revenue: string;
 }
 
 export function App() {
@@ -43,11 +43,11 @@ export function App() {
   const urlFilter = searchParams.get("filter") ?? "";
   const [filter, setFilter] = useState(urlFilter);
 
-  const { data: tagsResponse, isLoading } = useQuery<TagResponse>({
+  const { data: drinkResponse, isLoading } = useQuery<DrinkResponse>({
     queryKey: ["get-tags", urlFilter, page],
     queryFn: async () => {
       const response = await fetch(
-        `http://localhost:3333/tags?_page=${page}&_per_page=10&title=${urlFilter}`
+        `http://localhost:3333/drinks?_page=${page}&_per_page=10&title=${urlFilter}`
       );
       const data = await response.json();
 
@@ -75,7 +75,7 @@ export function App() {
       </div>
       <main className="max-w-6xl mx-auto space-y-5">
         <div className="flex items-center gap-3">
-          <h1 className="text-xl font-bold">Tags</h1>
+          <h1 className="text-xl font-bold">Drinks</h1>
           <Dialog.Root>
             <Dialog.DialogTrigger asChild>
               <Button variant="primary">
@@ -89,7 +89,7 @@ export function App() {
               <Dialog.Content className="fixed space-y-10 p-10 right-0 top-0 bottom-0 h-screen min-w-[320px] bg-zinc-950 border-l border-zinc-900">
                 <div className="space-y-3">
                   <Dialog.DialogTitle className="text-xl font-bold">
-                    Create tag
+                    Create drink
                   </Dialog.DialogTitle>
                   <Dialog.Description className="text-sm text-zinc-500">
                     Tags can be used to group videos about similar concepts.
@@ -108,7 +108,7 @@ export function App() {
             <Input variant="filter">
               <Search className="size-3" />
               <Control
-                placeholder="Search tags..."
+                placeholder="Search drinks..."
                 onChange={(e) => setFilter(e.target.value)}
                 value={filter}
               />
@@ -128,24 +128,31 @@ export function App() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead></TableHead>
-              <TableHead>Tag</TableHead>
-              <TableHead>Amount of videos</TableHead>
+              <TableHead>Código</TableHead>
+              <TableHead>Drinks</TableHead>
+              <TableHead>Revenue</TableHead>
               <TableHead></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {tagsResponse?.data.map((tag) => {
+            {drinkResponse?.data.map((drink) => {
               return (
-                <TableRow key={tag.id}>
+                <TableRow key={drink.id}>
+                  <TableCell>
+                    <span className="text-zinc-500 font-medium">
+                      {drink.id}
+                    </span>
+                  </TableCell>
                   <TableCell>
                     <div className="flex flex-col gap-0.5">
-                      <span className="font-medium">{tag.title}</span>
-                      <span className="text-xs text-zinc-500">{tag.slug}</span>
+                      <span className="font-medium">{drink.title}</span>
+                      <span className="text-xs text-zinc-500">
+                        {drink.slug}
+                      </span>
                     </div>
                   </TableCell>
                   <TableCell className="text-zinc-300">
-                    {tag.amountOfVideos} video(s)
+                    {drink.revenue}
                   </TableCell>
                   <TableCell className="text-right">
                     <Button size="icon">
@@ -158,10 +165,10 @@ export function App() {
           </TableBody>
         </Table>
 
-        {tagsResponse && (
+        {drinkResponse && (
           <Pagination
-            pages={tagsResponse.pages}
-            items={tagsResponse.items}
+            pages={drinkResponse.pages}
+            items={drinkResponse.items}
             page={page}
           />
         )}

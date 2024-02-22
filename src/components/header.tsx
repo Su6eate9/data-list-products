@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 
-import nivoLogo from "../assets/logo-nivo.svg";
+import mahaloVetorLogo from "../assets/logo-mahalo.svg";
 import { Badge } from "./ui/badge";
 
 export function Header() {
@@ -8,9 +8,9 @@ export function Header() {
     <div className="max-w-[1200px] mx-auto flex items-center justify-between">
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2.5">
-          <img src={nivoLogo} alt="nivo.video" />
+          <img className="size-6" src={mahaloVetorLogo} alt="nivo.video" />
 
-          <Badge>BETA</Badge>
+          {/* <Badge>BETA</Badge> */}
         </div>
 
         <svg
@@ -30,15 +30,9 @@ export function Header() {
         </svg>
 
         <div className="flex items-center gap-2.5">
-          <img
-            src="https://github.com/rocketseat.png"
-            className="size-5 rounded-full"
-            alt=""
-          />
+          <span className="text-sm font-medium text-zinc-100">Mahalo</span>
 
-          <span className="text-sm font-medium text-zinc-100">Rocketseat</span>
-
-          <Badge variant="primary">PRO</Badge>
+          <Badge variant="primary">HOUSE</Badge>
 
           <ChevronDown className="text-zinc-600 size-4" />
         </div>
@@ -60,19 +54,18 @@ export function Header() {
         </svg>
 
         <div className="flex items-center gap-2.5">
-          <span className="text-sm font-medium text-zinc-100">Ignite</span>
-
+          <span className="text-sm font-medium text-zinc-100">Drinks</span>
           <ChevronDown className="text-zinc-600 size-4" />
         </div>
       </div>
 
       <div className="flex items-center gap-3">
         <div className="flex flex-col items-end gap-0.5">
-          <span className="text-sm font-medium">Diego Fernandes</span>
-          <span className="text-xs text-zinc-400">diego@nivo.video</span>
+          <span className="text-sm font-medium">Antonio Claudino</span>
+          <span className="text-xs text-zinc-400">antonio@mahalo.house</span>
         </div>
         <img
-          src="https://github.com/diego3g.png"
+          src="https://github.com/Su6eate9.png"
           className="size-8 rounded-full"
           alt=""
         />

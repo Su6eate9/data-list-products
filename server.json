@@ -1,460 +1,130 @@
 {
-  "tags": [
-    {
-      "id": "022087f8-1dc8-4278-827e-c7a04e52773b",
-      "title": "React",
-      "slug": "react",
-      "amountOfVideos": 142
-    },
-    {
-      "id": "3e7e0c4d-9aef-4a27-a086-6c4f5dc04b47",
-      "title": "Vue.js",
-      "slug": "vue-js",
-      "amountOfVideos": 198
-    },
-    {
-      "id": "4b9d5ebd-0fc2-4d5c-9c8a-725454c76a61",
-      "title": "Angular",
-      "slug": "angular",
-      "amountOfVideos": 55
-    },
-    {
-      "id": "e2d61fe5-5cb0-47fd-8318-9317dcdb1662",
-      "title": "Node.js",
-      "slug": "node-js",
-      "amountOfVideos": 123
-    },
-    {
-      "id": "b27ebea9-903a-441e-84d2-fa5ef4c5c59f",
-      "title": "Python",
-      "slug": "python",
-      "amountOfVideos": 177
-    },
-    {
-      "id": "6f7de938-1d8e-4433-b08b-5a9399cb0f1e",
-      "title": "JavaScript",
-      "slug": "javascript",
-      "amountOfVideos": 86
-    },
-    {
-      "id": "3d632c8d-0e18-4f4c-a312-d3e90a9e3c24",
-      "title": "HTML",
-      "slug": "html",
-      "amountOfVideos": 64
-    },
-    {
-      "id": "d2c11a4a-9375-469e-aee7-6e62b220d515",
-      "title": "CSS",
-      "slug": "css",
-      "amountOfVideos": 102
-    },
-    {
-      "id": "cc8e16e0-1914-43d7-9329-ee5cf7bce734",
-      "title": "React Native",
-      "slug": "react-native",
-      "amountOfVideos": 33
-    },
-    {
-      "id": "26e87c04-8476-4a71-90b5-b02c379a67d2",
-      "title": "Express.js",
-      "slug": "express-js",
-      "amountOfVideos": 145
-    },
-    {
-      "id": "4c3762ef-7df2-4be3-850d-dcc2e7efea6f",
-      "title": "MongoDB",
-      "slug": "mongodb",
-      "amountOfVideos": 91
-    },
-    {
-      "id": "f3f0a47f-2262-4b9b-bdab-3a3e7a23368b",
-      "title": "Django",
-      "slug": "django",
-      "amountOfVideos": 77
-    },
-    {
-      "id": "bb87a548-3dc2-40d3-889a-d2d0765d3e78",
-      "title": "Laravel",
-      "slug": "laravel",
-      "amountOfVideos": 121
-    },
-    {
-      "id": "8d7b235d-522f-4d2f-af28-f1143d8ad3a4",
-      "title": "Ruby on Rails",
-      "slug": "ruby-on-rails",
-      "amountOfVideos": 105
-    },
-    {
-      "id": "3e7e0c4d-9aef-4a27-a086-6c4f5dc04b47",
-      "title": "Vue.js",
-      "slug": "vue-js",
-      "amountOfVideos": 198
-    },
-    {
-      "id": "4b9d5ebd-0fc2-4d5c-9c8a-725454c76a61",
-      "title": "Angular",
-      "slug": "angular",
-      "amountOfVideos": 55
-    },
-    {
-      "id": "e2d61fe5-5cb0-47fd-8318-9317dcdb1662",
-      "title": "Node.js",
-      "slug": "node-js",
-      "amountOfVideos": 123
-    },
-    {
-      "id": "b27ebea9-903a-441e-84d2-fa5ef4c5c59f",
-      "title": "Python",
-      "slug": "python",
-      "amountOfVideos": 177
-    },
-    {
-      "id": "6f7de938-1d8e-4433-b08b-5a9399cb0f1e",
-      "title": "JavaScript",
-      "slug": "javascript",
-      "amountOfVideos": 86
-    },
-    {
-      "id": "3d632c8d-0e18-4f4c-a312-d3e90a9e3c24",
-      "title": "HTML",
-      "slug": "html",
-      "amountOfVideos": 64
-    },
-    {
-      "id": "d2c11a4a-9375-469e-aee7-6e62b220d515",
-      "title": "CSS",
-      "slug": "css",
-      "amountOfVideos": 102
-    },
-    {
-      "id": "cc8e16e0-1914-43d7-9329-ee5cf7bce734",
-      "title": "React Native",
-      "slug": "react-native",
-      "amountOfVideos": 33
-    },
-    {
-      "id": "26e87c04-8476-4a71-90b5-b02c379a67d2",
-      "title": "Express.js",
-      "slug": "express-js",
-      "amountOfVideos": 145
-    },
-    {
-      "id": "4c3762ef-7df2-4be3-850d-dcc2e7efea6f",
-      "title": "MongoDB",
-      "slug": "mongodb",
-      "amountOfVideos": 91
-    },
-    {
-      "id": "f3f0a47f-2262-4b9b-bdab-3a3e7a23368b",
-      "title": "Django",
-      "slug": "django",
-      "amountOfVideos": 77
-    },
-    {
-      "id": "bb87a548-3dc2-40d3-889a-d2d0765d3e78",
-      "title": "Laravel",
-      "slug": "laravel",
-      "amountOfVideos": 121
-    },
-    {
-      "id": "8d7b235d-522f-4d2f-af28-f1143d8ad3a4",
-      "title": "Ruby on Rails",
-      "slug": "ruby-on-rails",
-      "amountOfVideos": 105
-    },
-    {
-      "id": "77a9fb0e-bb97-45d5-826a-f00b3f38dc5e",
-      "title": "Spring Boot",
-      "slug": "spring-boot",
-      "amountOfVideos": 134
-    },
-    {
-      "id": "c6a8248f-46f4-47a5-a349-0494ecdf4f0d",
-      "title": "Flutter",
-      "slug": "flutter",
-      "amountOfVideos": 99
-    },
-    {
-      "id": "4f0a1f4d-c6e3-4d6e-b22d-2e47dd7a2351",
-      "title": "Swift",
-      "slug": "swift",
-      "amountOfVideos": 72
-    },
-    {
-      "id": "3e7e0c4d-9aef-4a27-a086-6c4f5dc04b47",
-      "title": "Vue.js",
-      "slug": "vue-js",
-      "amountOfVideos": 198
-    },
-    {
-      "id": "4b9d5ebd-0fc2-4d5c-9c8a-725454c76a61",
-      "title": "Angular",
-      "slug": "angular",
-      "amountOfVideos": 55
-    },
-    {
-      "id": "e2d61fe5-5cb0-47fd-8318-9317dcdb1662",
-      "title": "Node.js",
-      "slug": "node-js",
-      "amountOfVideos": 123
-    },
-    {
-      "id": "b27ebea9-903a-441e-84d2-fa5ef4c5c59f",
-      "title": "Python",
-      "slug": "python",
-      "amountOfVideos": 177
-    },
-    {
-      "id": "6f7de938-1d8e-4433-b08b-5a9399cb0f1e",
-      "title": "JavaScript",
-      "slug": "javascript",
-      "amountOfVideos": 86
-    },
-    {
-      "id": "3d632c8d-0e18-4f4c-a312-d3e90a9e3c24",
-      "title": "HTML",
-      "slug": "html",
-      "amountOfVideos": 64
-    },
-    {
-      "id": "d2c11a4a-9375-469e-aee7-6e62b220d515",
-      "title": "CSS",
-      "slug": "css",
-      "amountOfVideos": 102
-    },
-    {
-      "id": "cc8e16e0-1914-43d7-9329-ee5cf7bce734",
-      "title": "React Native",
-      "slug": "react-native",
-      "amountOfVideos": 33
-    },
-    {
-      "id": "26e87c04-8476-4a71-90b5-b02c379a67d2",
-      "title": "Express.js",
-      "slug": "express-js",
-      "amountOfVideos": 145
-    },
-    {
-      "id": "4c3762ef-7df2-4be3-850d-dcc2e7efea6f",
-      "title": "MongoDB",
-      "slug": "mongodb",
-      "amountOfVideos": 91
-    },
-    {
-      "id": "f3f0a47f-2262-4b9b-bdab-3a3e7a23368b",
-      "title": "Django",
-      "slug": "django",
-      "amountOfVideos": 77
-    },
-    {
-      "id": "bb87a548-3dc2-40d3-889a-d2d0765d3e78",
-      "title": "Laravel",
-      "slug": "laravel",
-      "amountOfVideos": 121
-    },
-    {
-      "id": "8d7b235d-522f-4d2f-af28-f1143d8ad3a4",
-      "title": "Ruby on Rails",
-      "slug": "ruby-on-rails",
-      "amountOfVideos": 105
-    },
-    {
-      "id": "77a9fb0e-bb97-45d5-826a-f00b3f38dc5e",
-      "title": "Spring Boot",
-      "slug": "spring-boot",
-      "amountOfVideos": 134
-    },
-    {
-      "id": "c6a8248f-46f4-47a5-a349-0494ecdf4f0d",
-      "title": "Flutter",
-      "slug": "flutter",
-      "amountOfVideos": 99
-    },
-    {
-      "id": "4f0a1f4d-c6e3-4d6e-b22d-2e47dd7a2351",
-      "title": "Swift",
-      "slug": "swift",
-      "amountOfVideos": 72
-    },
-    {
-      "id": "fb93bf19-9b50-4dcf-b62d-40d9ffbbd898",
-      "title": "Kotlin",
-      "slug": "kotlin",
-      "amountOfVideos": 88
-    },
-    {
-      "id": "3db2a79b-3fd1-4b13-90d5-369f9cd77b5a",
-      "title": "Go",
-      "slug": "go",
-      "amountOfVideos": 111
-    },
-    {
-      "id": "e2e8cf4d-7884-45c6-94f1-7b9de08b2f9b",
-      "title": "Ruby",
-      "slug": "ruby",
-      "amountOfVideos": 57
-    },
-    {
-      "id": "3e7e0c4d-9aef-4a27-a086-6c4f5dc04b47",
-      "title": "Vue.js",
-      "slug": "vue-js",
-      "amountOfVideos": 198
-    },
-    {
-      "id": "4b9d5ebd-0fc2-4d5c-9c8a-725454c76a61",
-      "title": "Angular",
-      "slug": "angular",
-      "amountOfVideos": 55
-    },
-    {
-      "id": "e2d61fe5-5cb0-47fd-8318-9317dcdb1662",
-      "title": "Node.js",
-      "slug": "node-js",
-      "amountOfVideos": 123
-    },
-    {
-      "id": "b27ebea9-903a-441e-84d2-fa5ef4c5c59f",
-      "title": "Python",
-      "slug": "python",
-      "amountOfVideos": 177
-    },
-    {
-      "id": "6f7de938-1d8e-4433-b08b-5a9399cb0f1e",
-      "title": "JavaScript",
-      "slug": "javascript",
-      "amountOfVideos": 86
-    },
-    {
-      "id": "3d632c8d-0e18-4f4c-a312-d3e90a9e3c24",
-      "title": "HTML",
-      "slug": "html",
-      "amountOfVideos": 64
-    },
-    {
-      "id": "d2c11a4a-9375-469e-aee7-6e62b220d515",
-      "title": "CSS",
-      "slug": "css",
-      "amountOfVideos": 102
-    },
-    {
-      "id": "cc8e16e0-1914-43d7-9329-ee5cf7bce734",
-      "title": "React Native",
-      "slug": "react-native",
-      "amountOfVideos": 33
-    },
-    {
-      "id": "26e87c04-8476-4a71-90b5-b02c379a67d2",
-      "title": "Express.js",
-      "slug": "express-js",
-      "amountOfVideos": 145
-    },
-    {
-      "id": "4c3762ef-7df2-4be3-850d-dcc2e7efea6f",
-      "title": "MongoDB",
-      "slug": "mongodb",
-      "amountOfVideos": 91
-    },
-    {
-      "id": "f3f0a47f-2262-4b9b-bdab-3a3e7a23368b",
-      "title": "Django",
-      "slug": "django",
-      "amountOfVideos": 77
-    },
-    {
-      "id": "bb87a548-3dc2-40d3-889a-d2d0765d3e78",
-      "title": "Laravel",
-      "slug": "laravel",
-      "amountOfVideos": 121
-    },
-    {
-      "id": "8d7b235d-522f-4d2f-af28-f1143d8ad3a4",
-      "title": "Ruby on Rails",
-      "slug": "ruby-on-rails",
-      "amountOfVideos": 105
-    },
-    {
-      "id": "77a9fb0e-bb97-45d5-826a-f00b3f38dc5e",
-      "title": "Spring Boot",
-      "slug": "spring-boot",
-      "amountOfVideos": 134
-    },
-    {
-      "id": "c6a8248f-46f4-47a5-a349-0494ecdf4f0d",
-      "title": "Flutter",
-      "slug": "flutter",
-      "amountOfVideos": 99
-    },
-    {
-      "id": "4f0a1f4d-c6e3-4d6e-b22d-2e47dd7a2351",
-      "title": "Swift",
-      "slug": "swift",
-      "amountOfVideos": 72
-    },
-    {
-      "id": "fb93bf19-9b50-4dcf-b62d-40d9ffbbd898",
-      "title": "Kotlin",
-      "slug": "kotlin",
-      "amountOfVideos": 88
-    },
-    {
-      "id": "3db2a79b-3fd1-4b13-90d5-369f9cd77b5a",
-      "title": "Go",
-      "slug": "go",
-      "amountOfVideos": 111
-    },
-    {
-      "id": "e2e8cf4d-7884-45c6-94f1-7b9de08b2f9b",
-      "title": "Ruby",
-      "slug": "ruby",
-      "amountOfVideos": 57
-    },
-    {
-      "id": "a4e1cfd2-f12a-472f-bce2-bd7af4c478ec",
-      "title": "Rust",
-      "slug": "rust",
-      "amountOfVideos": 81
-    },
-    {
-      "id": "d9e998d4-4d1a-4c3b-b4a3-25510f64f6b2",
-      "title": "TypeScript",
-      "slug": "typescript",
-      "amountOfVideos": 95
-    },
-    {
-      "id": "6cbdf5e9-d0a5-47c8-8d21-ee2a6e3d46f2",
-      "title": "C#",
-      "slug": "csharp",
-      "amountOfVideos": 123
-    },
-    {
-      "id": "4d9c3807-1bb5-4c5b-8c7b-c1dc30b144eb",
-      "title": "PHP",
-      "slug": "php",
-      "amountOfVideos": 76
-    },
-    {
-      "id": "b8354098-087f-4e6b-a594-1446c481bd7d",
-      "title": "Scala",
-      "slug": "scala",
-      "amountOfVideos": 108
-    },
-    {
-      "id": "9a2c5e3a-9f33-4d2e-a6fb-f4f7e6204d0c",
-      "title": "Java",
-      "slug": "java",
-      "amountOfVideos": 94
-    },
+  "drinks": [
     {
       "id": "2aa6",
-      "title": "React Native",
-      "slug": "react-native",
-      "amountOfVideos": 0
+      "title": "Margarita",
+      "slug": "margarita",
+      "revenue": "tequila, lime juice, triple sec, salt"
     },
     {
-      "id": "b712",
-      "title": "Cobol",
-      "slug": "cobol",
-      "amountOfVideos": 69
+      "id": "3b98",
+      "title": "Piña Colada",
+      "slug": "pinacolada",
+      "revenue": "coconut cream, pineapple juice, rum"
+    },
+    {
+      "id": "4c32",
+      "title": "Mojito",
+      "slug": "mojito",
+      "revenue": "lime, mint leaves, white rum, soda water, sugar"
+    },
+    {
+      "id": "5d14",
+      "title": "Screwdriver",
+      "slug": "screwdriver",
+      "revenue": "vodka, orange juice"
+    },
+    {
+      "id": "6e21",
+      "title": "Cosmopolitan",
+      "slug": "cosmopolitan",
+      "revenue": "vodka, triple sec, cranberry juice, lime juice"
+    },
+    {
+      "id": "7f47",
+      "title": "Daiquiri",
+      "slug": "daiquiri",
+      "revenue": "rum, lime juice, sugar"
+    },
+    {
+      "id": "8g63",
+      "title": "Mai Tai",
+      "slug": "maitai",
+      "revenue": "rum, lime juice, orgeat syrup, orange liqueur"
+    },
+    {
+      "id": "9h81",
+      "title": "Negroni",
+      "slug": "negroni",
+      "revenue": "gin, vermouth, Campari"
+    },
+    {
+      "id": "10i45",
+      "title": "Martini",
+      "slug": "martini",
+      "revenue": "gin, vermouth"
+    },
+    {
+      "id": "11j37",
+      "title": "Bloody Mary",
+      "slug": "bloodymary",
+      "revenue": "vodka, tomato juice, spices, herbs, hot sauce"
+    },
+    {
+      "id": "12k29",
+      "title": "Manhattan",
+      "slug": "manhattan",
+      "revenue": "whiskey, sweet vermouth, bitters"
+    },
+    {
+      "id": "13l82",
+      "title": "Old Fashioned",
+      "slug": "oldfashioned",
+      "revenue": "bourbon, sugar, bitters, water"
+    },
+    {
+      "id": "14m57",
+      "title": "Whiskey Sour",
+      "slug": "whiskeysour",
+      "revenue": "whiskey, lemon juice, sugar, egg white"
+    },
+    {
+      "id": "15n94",
+      "title": "Gin and Tonic",
+      "slug": "ginandtonic",
+      "revenue": "gin, tonic water"
+    },
+    {
+      "id": "16o73",
+      "title": "Tequila Sunrise",
+      "slug": "tequilasunrise",
+      "revenue": "tequila, orange juice, grenadine"
+    },
+    {
+      "id": "17p24",
+      "title": "Long Island Iced Tea",
+      "slug": "longislandicedtea",
+      "revenue": "vodka, tequila, rum, gin, triple sec, sour mix, cola"
+    },
+    {
+      "id": "18q56",
+      "title": "White Russian",
+      "slug": "whiterussian",
+      "revenue": "vodka, coffee liqueur, cream"
+    },
+    {
+      "id": "19r48",
+      "title": "Irish Coffee",
+      "slug": "irishcoffee",
+      "revenue": "whiskey, coffee, sugar, cream"
+    },
+    {
+      "id": "20s89",
+      "title": "Tom Collins",
+      "slug": "tomcollins",
+      "revenue": "gin, lemon juice, sugar, soda water"
+    },
+    {
+      "id": "21t76",
+      "title": "Caipirinha",
+      "slug": "caipirinha",
+      "revenue": "cachaça, sugar syrup, lemon juice"
+    },
+    {
+      "id": "22u15",
+      "title": "Moscow Mule",
+      "slug": "moscowmule",
+      "revenue": "vodka, ginger beer, lime juice"
     }
   ]
 }
